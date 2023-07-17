@@ -45,4 +45,9 @@
     justify-content: space-between;
 }
 
+@media only screen and (max-width: 900px) {
+    .leftNavContainer{
+        display: none;
+    }
+  }
 

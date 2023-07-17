@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const Dashboard = () => {
     
     const [bookList, setBookList] = useState();
-    const [sortAvailabe, setSortAvailable] = useState(false);
+    const [sortAvailabe, setSortAvailable] = useState(true);
     const [refetch, setRefetch] = useState();
 
     const navigate = useNavigate();
@@ -98,7 +98,7 @@ const Dashboard = () => {
                 
             </span>  <span onClick={toggleAvailable} style={{cursor: 'pointer'}}>Sort by: <span className="filterBtn">{!sortAvailabe ? 'All' : 'Available' }</span> </span> </span>
             <div className="booksContainer">
-            {bookList?.map((book)=>{
+            {bookList?.length > 0 ? bookList?.map((book)=>{
                 return(
             <div className="indvBook">
             <Card style={{ width: '24rem'}}>
@@ -118,7 +118,11 @@ const Dashboard = () => {
             </Card>
             </div>
                 )
-            })}
+            }) : 
+            <div>
+                <h2>Sorry, no books available with such filter.</h2>
+            </div>
+            }
                 
                 </div>
             </div>

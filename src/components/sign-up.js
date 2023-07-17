@@ -27,9 +27,10 @@ const SignUp = ({setState}) => {
             <input type="password" name="password" id="password" className="authInput" /><br />
             </div>
             <div>
+            <span>{error}</span>
             <button type="submit" className="authBtn">Create account</button>
             <span style={{fontSize: '12px'}}>Already have an account? <span onClick={() => setState('login')} style={{color: "#DF1F26", cursor: "pointer"}}>login</span> </span>
-            <span>{error}</span>
+            
             </div>
         </form>
      );

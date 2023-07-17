@@ -19,7 +19,6 @@ export const useSignup = () => {
             setLoading(false)
         })
         .catch((err) => {
-            console.log(err)
             setError(err);
             setLoading(false);
         })

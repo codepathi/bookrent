@@ -6,7 +6,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
-    
 }
 
 .books{
@@ -58,3 +57,17 @@
     text-align: center;
   }
 
+
+
+  
+@media only screen and (max-width: 900px) {
+    .books{
+        width: 100%;
+    }
+    .sortBy{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+  }
