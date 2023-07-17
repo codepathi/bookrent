@@ -1,9 +1,22 @@
 import { useSignup } from "../hooks/useSignup";
 import '../styles/form.css'
-
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../contexts/userContext";
+import { useEffect } from "react";
 const SignUp = ({setState}) => {
 
     const {signup, loading, error} = useSignup();
+    const navigate = useNavigate();
+
+    const AuthContexts = useContext(AuthContext);
+    const { user } = AuthContexts;
+
+    useEffect(() => {
+        if(user) {
+            navigate("/dashboard");
+        }
+    }, [user])
     
     const onSubmit = async (e) => {
         e.preventDefault();
