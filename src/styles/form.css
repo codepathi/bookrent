@@ -1,0 +1,30 @@
+.authForm{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.formItem{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.authInput{
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.authBtn {
+    padding: 15px;
+    background-color: #DF1F26;
+    border: none;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 5px;
+}

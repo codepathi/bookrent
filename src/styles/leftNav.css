@@ -1,0 +1,48 @@
+.leftNavContainer{
+    position: fixed;
+    width: 22%;
+}
+
+.leftNav{
+    flex: 2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px rgb(215, 215, 215);
+}
+
+.logo{
+    font-size: 2.5em;
+    color:#DF1F26;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.navLinks{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 400;
+    width: 90%;
+}
+
+.navItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.selected{
+    background-color: #DF1F26;
+    border-radius: 5px;
+    color: white !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+
